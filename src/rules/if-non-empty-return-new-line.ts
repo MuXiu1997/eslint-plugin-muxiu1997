@@ -28,21 +28,34 @@ export default createEslintRule<Options, MessageIds>({
           return
         if (node.consequent.type === 'BlockStatement')
           return
-        if (!node.test.loc || !node.consequent.loc)
+        if (!node.consequent.loc)
           return
 
-        const ifLine = node.test.loc.end.line
+        const sourceCode = context.sourceCode
+        const closeParen = sourceCode.getTokenAfter(node.test)!
+        const betweenStart = closeParen.range[1]
+        const betweenEnd = node.consequent.range[0]
+        const commentsBetween = sourceCode
+          .getTokensBetween(closeParen, node.consequent, { includeComments: true })
+          .filter(token => token.type === 'Block' || token.type === 'Line')
+        const ifLine = closeParen.loc.end.line
         const returnLine = node.consequent.loc.start.line
         if (ifLine === returnLine) {
           context.report({
             node,
             loc: {
-              start: node.test.loc.end,
+              start: closeParen.loc.end,
               end: node.consequent.loc.start,
             },
             messageId: 'missingIfNonEmptyReturnNewLine',
             fix(fixer) {
-              return fixer.replaceTextRange([node.consequent.range[0], node.consequent.range[0]], '\n')
+              if (commentsBetween.length === 0)
+                return fixer.replaceTextRange([betweenStart, betweenEnd], '\n')
+
+              const preservedComments = commentsBetween
+                .map(comment => sourceCode.text.slice(comment.range[0], comment.range[1]))
+                .join(' ')
+              return fixer.replaceTextRange([betweenStart, betweenEnd], ` ${preservedComments}\n`)
             },
           })
         }

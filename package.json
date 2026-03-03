@@ -2,7 +2,6 @@
   "name": "eslint-plugin-muxiu1997",
   "type": "module",
   "version": "0.1.0",
-  "private": true,
   "packageManager": "pnpm@10.29.2",
   "description": "",
   "author": "MuXiu1997 <muxiu1997@muxiu1997.com> (https://github.com/MuXiu1997)",

@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-muxiu1997",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.1",
   "packageManager": "pnpm@10.29.2",
   "description": "MuXiu1997's ESLint rules",
   "author": "MuXiu1997 <muxiu1997@muxiu1997.com> (https://github.com/MuXiu1997)",

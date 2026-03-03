@@ -1,3 +1,7 @@
 [tools]
 node = "24"
 pnpm = "10.29.2"
+prek = "0.3.4"
+
+[hooks]
+postinstall = "prek install"

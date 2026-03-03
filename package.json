@@ -1,0 +1,15 @@
+{
+  "name": "eslint-plugin-muxiu1997",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MuXiu1997 <muxiu1997@muxiu1997.com> (https://github.com/MuXiu1997)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.29.2",
+  "type": "module"
+}

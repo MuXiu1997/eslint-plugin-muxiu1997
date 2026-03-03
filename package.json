@@ -3,13 +3,20 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@10.29.2",
-  "description": "",
+  "description": "MuXiu1997's ESLint rules",
   "author": "MuXiu1997 <muxiu1997@muxiu1997.com> (https://github.com/MuXiu1997)",
   "license": "MIT",
+  "homepage": "https://github.com/muxiu1997/eslint-plugin-muxiu1997#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muxiu1997/eslint-plugin-muxiu1997.git"
+  },
+  "bugs": "https://github.com/muxiu1997/eslint-plugin-muxiu1997/issues",
   "keywords": [
     "eslint",
     "eslint-plugin"
   ],
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -28,6 +35,9 @@
     "lint": "eslint . --fix",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "eslint": "*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "7.6.1",

@@ -6,7 +6,7 @@ export default defineConfig({
   target: 'node18',
   clean: true,
   dts: true,
-  inlineOnly: false,
+  external: [/^@typescript-eslint\//],
   alias: {
     '~': './src',
   },

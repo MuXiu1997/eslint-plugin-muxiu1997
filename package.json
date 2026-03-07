@@ -1,17 +1,17 @@
 {
-  "name": "eslint-plugin-muxiu1997",
+  "name": "@muxiu1997/eslint-plugin",
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@10.29.2",
   "description": "MuXiu1997's ESLint rules",
   "author": "MuXiu1997 <muxiu1997@muxiu1997.com> (https://github.com/MuXiu1997)",
   "license": "MIT",
-  "homepage": "https://github.com/muxiu1997/eslint-plugin-muxiu1997#readme",
+  "homepage": "https://github.com/MuXiu1997/eslint-plugin#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muxiu1997/eslint-plugin-muxiu1997.git"
+    "url": "git+https://github.com/MuXiu1997/eslint-plugin.git"
   },
-  "bugs": "https://github.com/muxiu1997/eslint-plugin-muxiu1997/issues",
+  "bugs": "https://github.com/MuXiu1997/eslint-plugin/issues",
   "keywords": [
     "eslint",
     "eslint-plugin"

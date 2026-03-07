@@ -1,7 +1,7 @@
 import type { RuleListener, RuleContext as TSESLintRuleContext, RuleModule as TSESLintRuleModule } from '@typescript-eslint/utils/ts-eslint'
 import type { Rule } from 'eslint'
 
-const blobUrl = 'https://github.com/muxiu1997/eslint-plugin-muxiu1997/blob/main/src/rules/'
+const blobUrl = 'https://github.com/MuXiu1997/eslint-plugin/blob/main/src/rules/'
 
 export type RuleModule<T extends readonly unknown[]> = Rule.RuleModule & {
   defaultOptions: T

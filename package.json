@@ -19,11 +19,16 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
-    }
+      "types": {
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "files": [
@@ -41,12 +46,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "7.6.1",
+    "@arethetypeswrong/core": "0.18.2",
     "@types/node": "25.2.0",
     "@typescript-eslint/parser": "8.56.1",
     "@typescript-eslint/utils": "8.56.1",
     "eslint": "9.39.2",
     "eslint-plugin-format": "2.0.1",
     "eslint-vitest-rule-tester": "3.1.0",
+    "publint": "0.3.18",
     "tsdown": "0.20.3",
     "vitest": "4.0.18"
   },

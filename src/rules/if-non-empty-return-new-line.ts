@@ -22,14 +22,10 @@ export default createEslintRule<Options, MessageIds>({
   create(context) {
     return {
       IfStatement(node: TSESTree.IfStatement) {
-        if (!node.consequent)
-          return
-        if (node.consequent.type === 'ReturnStatement' && !node.consequent.argument)
-          return
-        if (node.consequent.type === 'BlockStatement')
-          return
-        if (!node.consequent.loc)
-          return
+        if (!node.consequent) return
+        if (node.consequent.type === 'ReturnStatement' && !node.consequent.argument) return
+        if (node.consequent.type === 'BlockStatement') return
+        if (!node.consequent.loc) return
 
         const sourceCode = context.sourceCode
         const closeParen = sourceCode.getTokenAfter(node.test)!

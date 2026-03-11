@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: mise exec -- pnpm install --frozen-lockfile
 
+      - name: Build
+        run: mise exec -- pnpm run build
+
       - name: Lint
         run: mise exec -- pnpm run lint
 

@@ -26,11 +26,24 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+    "./preset": {
+      "types": {
+        "import": "./dist/configs/preset.d.mts",
+        "require": "./dist/configs/preset.d.cts"
+      },
+      "import": "./dist/configs/preset.mjs",
+      "require": "./dist/configs/preset.cjs"
+    },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
+  "typesVersions": {
+    "*": {
+      "preset": ["./dist/configs/preset.d.mts"]
+    }
+  },
   "files": [
     "dist"
   ],

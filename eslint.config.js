@@ -6,4 +6,7 @@ export default antfu(
     formatters: true,
     typescript: true,
   },
+  {
+    ignores: ['README.md'],
+  },
 )

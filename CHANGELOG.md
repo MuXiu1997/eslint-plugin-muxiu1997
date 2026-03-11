@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/MuXiu1997/eslint-plugin/compare/v1.0.0...v1.1.0) (2026-03-11)
+
+
+### Features
+
+* add /preset subpath export ([e5d45ae](https://github.com/MuXiu1997/eslint-plugin/commit/e5d45ae6a1c743eea7e4a0cb0534f98a4c9805c1))
+
 ## 1.0.0 (2026-03-09)
 
 
